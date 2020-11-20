@@ -3,7 +3,7 @@
 #echo "user name:$USER"
 
 # the below command exports all the variables thereafter
-# set -a
+#set -a
 
 
 var1=12
