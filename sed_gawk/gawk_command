@@ -1,0 +1,14 @@
+gawk {print "Hello Bhanusree!"}
+gawk -F: {print $1} /etc/passwd
+gawk {print $0} data3
+gawk {print $1$4$5$6} data3
+gawk {print $1} data3
+echo "My name is Rich" | gawk '{=Dave; print bash}'
+gawk {
+$4="testing"
+print $0 }
+gawk -F: -f script2 /etc/passwd
+gawk -F: -f script3 /etc/passwd
+gawk ’BEGIN {print Hello World!}’
+gawk BEGIN {print "Hello World!"} {print $0} END {print "byebye"}
+gawk -f script4 /etc/passwd

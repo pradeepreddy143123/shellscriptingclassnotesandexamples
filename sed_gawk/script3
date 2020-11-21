@@ -1,0 +1,4 @@
+{ 
+text="’s userid is " 
+print $5 text $1 
+}
