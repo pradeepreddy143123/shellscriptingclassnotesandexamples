@@ -1,0 +1,11 @@
+#!/bin/sh
+#Write a shell script that accepts a file name, starting and ending line numbers as arguments and displays all the lines between the given line numbers.
+
+echo "enter file name"
+read file
+echo "enter starting number"
+read a
+echo "enter ending line"
+read z
+
+sed -n $a,$z\p $file
