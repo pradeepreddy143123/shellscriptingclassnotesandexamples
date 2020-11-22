@@ -1,0 +1,18 @@
+#!/bin/sh
+#Write a shell script that displays a list of all the files in the current directory to which the user has read, write and execute permissions.
+
+if [ $# -lt 1 ]
+then
+        echo "usage: <arg>"
+        exit 0
+fi
+
+#echo "enter directory"
+#read file
+for file in *
+do
+        if [ -r $file -a -w $file -a -x $file ]
+        then
+        echo "$file"
+fi
+done
