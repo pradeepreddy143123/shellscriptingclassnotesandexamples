@@ -10,9 +10,9 @@ Shell Programming Lab Assignments:
 7. Write a shell script that deletes all lines containing a specified word in one or more files supplied as arguments to it.
 8. Write a shell script that displays a list of all the files in the current directory to which the user has read, write and execute permissions.
 9. Write a shell script that receives any number of file names as arguments checks if every argument supplied is a file or a directory and reports accordingly. Whenever the argument is a file, the number of lines on it is also reported.
-10.Write a shell script that accepts a list of file names as its arguments, counts and reports the occurrence of each word that is present in the first argument file on other argument files.
-11.Write a shell script to list all of the directory files in a directory.
-12.Write a shell script to find factorial of a given integer.
+10. Write a shell script that accepts a list of file names as its arguments, counts and reports the occurrence of each word that is present in the first argument file on other argument files.
+11. Write a shell script to list all of the directory files in a directory.
+12. Write a shell script to find factorial of a given integer.
 
 Mini Project - shell programming:
 ---------------------------------
