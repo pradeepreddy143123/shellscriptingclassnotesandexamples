@@ -1,0 +1,15 @@
+#!/bin/sh
+# addition of two numbers
+
+echo "first number is: $1"
+echo "second number is: $2"
+if [ $# -ne 2 ]
+then
+        echo "its an error..! use two numbers"
+exit 0
+fi
+
+a=$1
+b=$2
+sum=$((a+b))
+echo "$sum"
