@@ -1,0 +1,17 @@
+#!/bin/sh
+# biggest of three numbers
+if [ $# -ne 3 ]
+then
+        echo "its an error..!! enter three numbers in command line <arg1> <arg2> <arg3>"
+        exit 0
+fi
+
+if [ $1 -ge $2 ] && [ $1 -ge $3 ]
+then
+        echo "the biggest number is:$1"
+elif [ $2 -ge $1 ] && [ $2 -ge $3 ]
+then
+        echo "the biggest number is:$2"
+else
+        echo "the biggest number is:$3"
+fi
