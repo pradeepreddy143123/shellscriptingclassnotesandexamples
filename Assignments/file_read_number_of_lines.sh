@@ -45,7 +45,6 @@ then
   exit 3
 fi
 
-
 exec 3<&0            # Redirect standard input temporarily to file descriptor 3
 exec 0<$file_name    # Redirect the standard input from the text file
 
@@ -55,7 +54,7 @@ i=0                  # Initiate a variable to keep track of current line read
 while read line
 do
   i=`expr $i + 1`      # Update the line number by incrementing it by 1
-  # Check to see if the current line number is between the range
+  # Check to see if the current line number is between the rangeS
   if ( [ $i -ge $start_line_num ] && [ $i -le $end_line_num ] )
     then
     echo $i " " $line    # Display the line number and the line text
