@@ -1,0 +1,4 @@
+vmstat 1 2
+vmstat
+vmstat 1 2 | sed -n '/[0-9]/p' | sed -n '2p'
+vmstat 1 2 | sed -n '/[0-9]/p'
