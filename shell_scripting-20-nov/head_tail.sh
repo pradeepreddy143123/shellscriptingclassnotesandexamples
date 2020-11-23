@@ -9,10 +9,12 @@ echo "enter the starting line number"
 read s
 
 echo "enter the ending line number"
-read n
+read e
 
-
-
-	sed -n $s,$n\p $file | cat > newfile
-
-cat newfile
+    d=`expr $e - $s`
+	if [ -f $file ];then
+	    echo "lines between $s and $e are"
+	    head -$e $file | tail -$d
+	else
+	    echo "file does not exist"
+	fi
