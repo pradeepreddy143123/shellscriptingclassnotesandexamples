@@ -12,7 +12,6 @@ echo "enter the ending line number"
 read n
 
 
-if [ $# -eq 2 ];then
 
 	sed -n $s,$n\p $file | cat > newfile
 
