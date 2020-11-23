@@ -2,9 +2,9 @@
 
 #Write Script to find out biggest number from given three nos. Nos are supplied as command line arguments. Print error if sufficient arguments are not supplied.
 
-echo "1st no $1"
-echo "2nd no $2"
-echo "3rd no $3"
+#echo "1st no $1"
+#echo "2nd no $2"
+#echo "3rd no $3"
  
 if [ $# -eq 3 ]
 then
