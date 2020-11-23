@@ -4,11 +4,16 @@
 
 echo "read 1 file"
 read file
+
+echo "enter the starting line number"
+read s
+
+echo "enter the ending line number"
+read n
+
+
 if [ $# -eq 2 ];then
 
-	echo "$(head -n $1 number | tail -n $2)"
+	sed -n $s,$n\p $file | cat > newfile
 
-else
-	
-	echo "usage:$0 <head> <tail>"
-fi	
+cat newfile
