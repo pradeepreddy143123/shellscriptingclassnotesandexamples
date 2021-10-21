@@ -1,3 +1,7 @@
+<<comment
+3. Write script to print given number in reverse order, for eg. If no is 123 it must print as 321.
+comment
+
 #!/bin/sh
 
 echo "enter a nummber"
