@@ -1,3 +1,7 @@
+<<question
+11.Write a shell script to list all of the directory files in a directory.
+question
+
 #!/bin/sh
 
 for VAR in $@
