@@ -1,3 +1,7 @@
+<<question
+12.Write a shell script to find factorial of a given integer.
+question
+
 #!/bin/sh
 
 echo -n "enter a number: "
