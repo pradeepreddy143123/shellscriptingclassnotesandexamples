@@ -1,4 +1,9 @@
 Shell Programming Lab Assignments:
+<!-- vim-markdown-toc GitLab -->
+
+* [Mini Project - shell programming:](#mini-project-shell-programming)
+
+<!-- vim-markdown-toc -->
 ----------------------------------
 
     1. Write shell script that will add two nos, which are supplied as command line argument, and if this two nos are not given show error and its usage
