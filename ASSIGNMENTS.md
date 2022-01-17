@@ -1,10 +1,13 @@
-Shell Programming Lab Assignments:
-<!-- vim-markdown-toc GitLab -->
 
-* [Mini Project - shell programming:](#mini-project-shell-programming)
+<!-- vim-markdown-toc GFM -->
+
+* [Shell Programming Lab Assignments](#shell-programming-lab-assignments)
+* [Mini Project - shell programming](#mini-project---shell-programming)
 
 <!-- vim-markdown-toc -->
-----------------------------------
+
+
+## Shell Programming Lab Assignments
 
     1. Write shell script that will add two nos, which are supplied as command line argument, and if this two nos are not given show error and its usage
     2. Write Script to find out biggest number from given three nos. Nos are supplied as command line arguments. Print error if sufficient arguments are not supplied.
@@ -19,15 +22,16 @@ Shell Programming Lab Assignments:
     11.Write a shell script to list all of the directory files in a directory.
     12.Write a shell script to find factorial of a given integer.
 
-Mini Project - shell programming:
----------------------------------
-Write a network monitor application server_monitor.sh which show the below information
 
-OS name
-Architecture version
-Kernel version
-Internet status
-IP Address
-Memory Usage
-Disk file systems usage
-system uptime
+## Mini Project - shell programming
+
+    Write a network monitor application server_monitor.sh which show the below information
+
+    OS name
+    Architecture version
+    Kernel version
+    Internet status
+    IP Address
+    Memory Usage
+    Disk file systems usage
+    system uptime
