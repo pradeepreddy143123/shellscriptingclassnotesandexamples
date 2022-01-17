@@ -1,82 +1,66 @@
 # shell-scripting
 <!-- vim-markdown-toc GFM -->
 
-* [Command Description syntax](#command-description-syntax)
-* [What is Shell?](#what-is-shell)
-* [Shell Script:](#shell-script)
-* [Shell Syntax:](#shell-syntax)
-* [The below examples explain shell programming basics:](#the-below-examples-explain-shell-programming-basics)
-* [Hello World Schell Program:](#hello-world-schell-program)
-* [Quotations & Substitutions:](#quotations--substitutions)
-* [Shell Parameters:](#shell-parameters)
-* [Shell Conditions: [conditions.sh]](#shell-conditions-conditionssh)
-* [Shell Control Statements:](#shell-control-statements)
-* [Shell ERROR Handling:](#shell-error-handling)
-* [Shell Debugging:](#shell-debugging)
-* [Functions in Shell: [ Example: functions.sh ]](#functions-in-shell--example-functionssh-)
-* [Export user defined environment variables: [ Example: export1.sh, export2.sh ]](#export-user-defined-environment-variables--example-export1sh-export2sh-)
-* [Usage of Shell scripting:](#usage-of-shell-scripting)
-* [Background Process vs foreground Process:](#background-process-vs-foreground-process)
+* [Shell Scripting class notes with examples](#shell-scripting-class-notes-with-examples)
+	* [1. Shell Scripting Introduction](#1-shell-scripting-introduction)
+		* [1.1  What is Shell?](#11--what-is-shell)
+		* [1.2. Shell Script](#12-shell-script)
+		* [1.3. Hello World Shell Program](#13-hello-world-shell-program)
+	* [2. Quotations & Substitutions:](#2-quotations--substitutions)
+	* [3. Shell Parameters:](#3-shell-parameters)
+	* [4. Shell Conditions: [conditions.sh]](#4-shell-conditions-conditionssh)
+	* [5. Shell Control Statements:](#5-shell-control-statements)
+	* [6. Shell ERROR Handling:](#6-shell-error-handling)
+	* [7. Shell Debugging:](#7-shell-debugging)
+	* [8. Functions in Shell: [ Example: functions.sh ]](#8-functions-in-shell--example-functionssh-)
+	* [9. Export user defined environment variables: [ Example: export1.sh, export2.sh ]](#9-export-user-defined-environment-variables--example-export1sh-export2sh-)
+	* [10. Usage of Shell scripting:](#10-usage-of-shell-scripting)
+	* [11. Background Process vs foreground Process:](#11-background-process-vs-foreground-process)
+		* [11.1. What is Process:](#111-what-is-process)
+		* [11.2. Create a process:](#112-create-a-process)
+		* [11.3. List of running process:](#113-list-of-running-process)
+		* [11.4. Process Execution:](#114-process-execution)
 
 <!-- vim-markdown-toc -->
 
-Shell Scripting class notes with examples
+# Shell Scripting class notes with examples
 
-Command Description syntax
---------------------------
-angle brackets for required parameters: ping <hostname>
-square brackets for optional parameters: mkdir [-p] <dirname>
-ellipses for repeated items: cp <source1> [source2...] <dest>
-vertical bars for choice of items: netstat {-t|-u}
+## 1. Shell Scripting Introduction
 
-What is Shell?
--------------
-Shell is a tool to execute commands.
+### 1.1  What is Shell?
 
-Shell Script:
-------------
-A shell script is a computer program designed to be run by the Unix shell, a command line interpreter. 
+	Shell is a tool to execute commands.
 
-Shell Syntax:
--------------
-variables: strings,numbers,environments and parameters
-Conditions: Shell Booleans
-Program control: if, elif,for,while,untile,case
-Lists
-Functions
+### 1.2. Shell Script
+	
+	A shell script is a computer program designed to be run by the Unix shell, a command line interpreter. 
+
+### 1.3. Hello World Shell Program [hello.sh]
+
+	hello.sh: Hello World Shell Program (echo and read commands).
 
 
-The below examples explain shell programming basics:
----------------------------------------------------
+## 2. Quotations & Substitutions: [quotations.sh]
 
-Hello World Schell Program:
----------------------------
-hello.sh: Hello World Shell Program (echo and read commands).
+	quotations.sh: How to use environment variables and quotations in shell.
 
+## 3. Shell Parameters: [parameters.sh]
 
+	parameters.sh: shell command line arguments.
 
-Quotations & Substitutions:
----------------------------
-quotations.sh: How to use environment variables and quotations in shell.
+	$0	The name of the shell script
+	$#	The number of parameters passed
+	$$	The process ID of the shell script
 
-
-Shell Parameters:
-----------------
-parameters.sh: shell command line arguments.
-
-$0	The name of the shell script
-$#	The number of parameters passed
-$$	The process ID of the shell script
-
-$1,$2,...	The parameters given to the script
-$*		list of all the parameters, in a single variable, separated by the first character in the environment variable IFS.
-$@ 		A subtle variation on $*; it doesn’t use the IFS environment variable, so parameters are not run together even if IFS is empty
+	$1,$2,...	The parameters given to the script
+	$*		list of all the parameters, in a single variable, separated by the first character in the environment variable IFS.
+	$@ 		A subtle variation on $*; it doesn’t use the IFS environment variable, so parameters are not run together even if IFS is empty
 
 
 
-Shell Conditions: [conditions.sh]
------------------
-3 types of conditions 
+## 4. Shell Conditions: [conditions.sh]
+
+	3 types of conditions 
 
 	String Comparison Result
 	---------------------
@@ -112,102 +96,87 @@ Shell Conditions: [conditions.sh]
 
 
 
-Shell Control Statements:
-------------------------
+## 5. Shell Control Statements: [control.sh]
 
 	control.sh: control statements.
 
-while condition
-do
-	statements
-done
-While execute the statements until the condition FAILS.
-until execute the statements until the condition SUCCESS.
+	while condition
+	do
+		statements
+	done
+	While execute the statements until the condition FAILS.
+	until execute the statements until the condition SUCCESS.
 
 
-Shell ERROR Handling:
---------------------
-script-error.sh: Proper ERROR handling in shell.
+## 6. Shell ERROR Handling: [script-error.sh]
+
+	script-error.sh: Proper ERROR handling in shell.
+
+## 7. Shell Debugging: [script7.sh]
+
+	script7.sh: debugging in shell
+		$ sh -x ./<script_name>
 
 
-
-Shell Debugging:
----------------
-script7.sh: debugging in shell
-	$ sh -x ./<script_name>
+## 8. Functions in Shell: [ Example: functions.sh ]
 
 
+	You can define functions in the shell.
+
+	To define a shell function, simply write its name followed by empty parentheses and enclose the statements in braces:
+
+	function_name () 
+	{
+		echo $1
+		statements
+	}
+
+	function_name 12
 
 
+## 9. Export user defined environment variables: [ Example: export1.sh, export2.sh ]
+	By default, variables created in a shell are not available in further (sub)shells invoked from that shell. 
+	The export command creates an environment variable from its parameter that can be seen by other scripts and programs invoked from the current program.
+
+	The commands set -a or set -allexport will export all variables thereafter.
 
 
-Functions in Shell: [ Example: functions.sh ]
--------------------
+## 10. Usage of Shell scripting:
 
-You can define functions in the shell.
-
-To define a shell function, simply write its name followed by empty parentheses and enclose the statements in braces:
-
-
-function_name () 
-{
-	echo $1
-	statements
-}
-
-function_name 12
-
-
-Export user defined environment variables: [ Example: export1.sh, export2.sh ]
------------------------------------------
-By default, variables created in a shell are not available in further (sub)shells invoked from that shell. 
-The export command creates an environment variable from its parameter that can be seen by other scripts and programs invoked from the current program.
-
-The commands set -a or set -allexport will export all variables thereafter.
-
-
-
-
-
-
-
-Usage of Shell scripting:
-------------------------
 1. ping.sh: This shell shows Internet status.
 2. server-monitor.sh: network monitor application show the below information 
-	a OS name
-	b. Architecture version
-	c. Kernel version
-	d. Internet status
-	e. IP Address
-	f. Memory Usage
-	g. Disk file systems usage
-	h. system uptime
+
+		a OS name
+		b. Architecture version
+		c. Kernel version
+		d. Internet status
+		e. IP Address
+		f. Memory Usage
+		g. Disk file systems usage
+		h. system uptime
+
 3. km-bbb-kernel-build.sh: Environment Setup, Configure,Compilation of kernel source code.
 4. km-bbb-kernel-install.sh: Installation of kernel source code.
   
 
+## 11. Background Process vs foreground Process:
 
+	
+### 11.1. What is Process: 
 
-
-
-Background Process vs foreground Process:
------------------------------------------
-
-	What is Process: 
-	---------------
 	Process is an execution of a program (or) is an instance of a program.
 
-	Create a process:
-	-----------------
+### 11.2. Create a process:
+
 	Command line interface [CLI] or Graphical interface [GUI].
 
-	List of running process: 
-	-----------------------
+	
+### 11.3. List of running process: 
+	
 	$ ps -eaf
 
-	Process Execution:
-	----------------- 
+### 11.4. Process Execution:
+
 	Foreground process [ Interactive Process ] and Background Process [ Non-Interactive Process / Daemon Process]
 
 
@@ -227,3 +196,7 @@ Background Process vs foreground Process:
 	Move Particular process from bg -> fg:
 		$ fg <job_id>
 
+
+<!-- vim-markdown-toc GFM -->
+
+<!-- vim-markdown-toc -->
