@@ -1,4 +1,24 @@
 # shell-scripting
+<!-- vim-markdown-toc GFM -->
+
+* [Command Description syntax](#command-description-syntax)
+* [What is Shell?](#what-is-shell)
+* [Shell Script:](#shell-script)
+* [Shell Syntax:](#shell-syntax)
+* [The below examples explain shell programming basics:](#the-below-examples-explain-shell-programming-basics)
+* [Hello World Schell Program:](#hello-world-schell-program)
+* [Quotations & Substitutions:](#quotations--substitutions)
+* [Shell Parameters:](#shell-parameters)
+* [Shell Conditions: [conditions.sh]](#shell-conditions-conditionssh)
+* [Shell Control Statements:](#shell-control-statements)
+* [Shell ERROR Handling:](#shell-error-handling)
+* [Shell Debugging:](#shell-debugging)
+* [Functions in Shell: [ Example: functions.sh ]](#functions-in-shell--example-functionssh-)
+* [Export user defined environment variables: [ Example: export1.sh, export2.sh ]](#export-user-defined-environment-variables--example-export1sh-export2sh-)
+* [Usage of Shell scripting:](#usage-of-shell-scripting)
+* [Background Process vs foreground Process:](#background-process-vs-foreground-process)
+
+<!-- vim-markdown-toc -->
 
 Shell Scripting class notes with examples
 
