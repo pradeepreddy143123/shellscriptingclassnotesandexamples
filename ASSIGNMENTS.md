@@ -1,4 +1,3 @@
-
 <!-- vim-markdown-toc GFM -->
 
 * [Shell Programming Lab Assignments](#shell-programming-lab-assignments)
