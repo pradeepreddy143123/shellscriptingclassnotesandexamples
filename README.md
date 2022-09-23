@@ -200,3 +200,23 @@
 <!-- vim-markdown-toc GFM -->
 
 <!-- vim-markdown-toc -->
+
+
+
+
+
+
+
+
+
+#!/bin/sh
+echo " copying command Directory"
+While [ $var-gt 10 ]
+do
+echo "Copying that Folder:$var"
+cp -vR S D
+done
+rm -vf *_SF_Updated/*.out
+rm -vf *_SF_Updated/*.cfg
+ldconfig
+echo "Done"
