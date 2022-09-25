@@ -1,4 +1,3 @@
-
 <!-- vim-markdown-toc GFM -->
 
 * [Shell Programming Lab Assignments](#shell-programming-lab-assignments)
@@ -34,3 +33,4 @@
     Memory Usage
     Disk file systems usage
     system uptime
+    
